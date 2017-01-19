@@ -1,0 +1,75 @@
+/* Include Foundation */
+@import 'node_modules/foundation-sites/scss/foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+
+body {
+    @include grid-row();
+
+    background-color: lightgrey;
+}
+// header stuff
+header {
+    @include grid-row();
+    background-color: white;
+    position: relative;
+
+    img {
+    width: 200px;
+}
+
+    h1 {
+        display: inline-block;
+        font-size: 3em;
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+
+    }
+
+}
+
+// search stuff
+
+
+// buttons for add/hide
+#addHide button {
+    border: 1px solid grey;
+    border-radius: 2px;
+    padding: 1%;
+}
+// all <li>'s
+li {
+    list-style: none;
+}
+
+.doughType {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+// food list mustache <li>
+#foodBox li {
+    border-top: 1px solid darkgray; 
+    
+    img {
+    width: 200px;
+    }
+//  food list mustache 
+    .price {
+        display: inline-block;
+        font-weight: 700px;
+        margin: 5px;
+    }
+}
+// food list mustache
+    .description {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+.hidden {
+    display: none;
+}

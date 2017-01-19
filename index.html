@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>  
+        <title>mmmFood</title>
+        <!--add css file-->
+        <link rel="stylesheet" href="style.css">
+        <!--add js file-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+        <script src="app.js"></script>
+        
+        <!--mustache for food list-->
+        <script id="dough" type="x-mustache-templates">
+            <div>
+                <h1 class="doughType">{{type}}</h1>
+                <p class="price">${{cost}}</p>
+            </div>
+            <img src="{{image}}"/>
+            <p class="description">{{description}}</p>
+        </script>
+    </head>
+    
+    <body>
+        <!--header stuff-->
+        <header>
+            <img src="https://i.ytimg.com/vi/qPhQsaXjkZ8/maxresdefault.jpg"/>
+            <h1>mmmmDonuts</h1>
+                            <!--button for show/hide-->
+        </header>
+
+        <main>
+                <!--search-->
+            <input id="search" type="text" placeholder="search"/>
+
+            <!--add and show buttons-->
+            <nav id="addHide">
+                <button id="showList">show stuff</button>
+                <button id="showAdd">add stuff</button>
+            </nav>
+            <!--list of donuts-->
+            <section id="foodBox">
+                <ul id="food"></ul>
+            </section>
+
+            <!--add items-->
+            <section id="addView" class="hidden">
+                <h2>Add donut</h2>
+                <!--menu for adding donuts-->
+                <input id="donutName" type="text" placeholder="donut name">
+                <input id="donutDescription" type="text" placeholder="donut description">
+                <input id="donutPrice" type="text" placeholder="price">
+                <input id="submit" type="button" value="Submit">
+            </section>
+        </main>
+    </body>
+</html>
