@@ -4,27 +4,13 @@ window.addEventListener('load', function () {
     addDonuts();
 
     // query selects buttons
-    let navList = document.querySelector('#showList');
-    let navAdd = document.querySelector('#showAdd');
+    let navList = document.querySelector('#tab1');
 
     // query selects where food list will be shown
     let viewList = document.querySelector('#foodBox');
-    // query selects where add menu will be shown 
-    let viewAdd = document.querySelector('#addView');
 
     // query selects input box
     let searchBox = document.querySelector('#search');
-
-    // when navList is clicked, show list of food 
-    navList.addEventListener('click', function () {
-        viewList.classList.remove('hidden');
-        viewAdd.classList.add('hidden');
-    });
-    //when navAdd is clicked, show add menu 
-    navAdd.addEventListener('click', function () {
-        viewList.classList.add('hidden');
-        viewAdd.classList.remove('hidden');
-    });
 
     searchBox.addEventListener('keyup', function () {
         console.log(searchBox.value);
@@ -46,7 +32,7 @@ window.addEventListener('load', function () {
 
 // show donut menu
 function donutMenu (arr) {
-    let parent = document.querySelector('#foodBox')
+    let parent = document.querySelector('#food')
     parent.innerHTML = '';
     for (let i = 0; i < arr.length; i++) {
         let child = document.createElement('li');
@@ -90,3 +76,9 @@ submitButton.addEventListener('click', function () {
 function clearBoxValue (name) {
     name.value='';
 }
+
+
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+

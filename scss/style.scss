@@ -51,12 +51,9 @@ li {
 }
 
 // food list mustache <li>
-#foodBox li {
+.foodBox li {
     border-top: 1px solid darkgray; 
     
-    img {
-    width: 200px;
-    }
 //  food list mustache 
     .price {
         display: inline-block;
@@ -73,3 +70,7 @@ li {
 .hidden {
     display: none;
 }
+
+ img {
+    width: 200px;
+    }

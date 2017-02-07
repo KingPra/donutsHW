@@ -1296,11 +1296,9 @@ li {
   display: inline-block;
   margin: 0 auto; }
 
-#foodBox li {
+.foodBox li {
   border-top: 1px solid darkgray; }
-  #foodBox li img {
-    width: 200px; }
-  #foodBox li .price {
+  .foodBox li .price {
     display: inline-block;
     font-weight: 700px;
     margin: 5px; }
@@ -1311,3 +1309,6 @@ li {
 
 .hidden {
   display: none; }
+
+img {
+  width: 200px; }

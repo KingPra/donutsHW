@@ -6,6 +6,14 @@
         <link rel="stylesheet" href="style.css">
         <!--add js file-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+        <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+        <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
         <script src="app.js"></script>
         
         <!--mustache for food list-->
@@ -32,17 +40,20 @@
             <input id="search" type="text" placeholder="search"/>
 
             <!--add and show buttons-->
-            <nav id="addHide">
-                <button id="showList">show stuff</button>
-                <button id="showAdd">add stuff</button>
-            </nav>
+            <div id="tabs">
+            <ul>
+                <li id="tab1"><a href="#tabs-1">donut list</a></li>
+                <li><a href="#tabs-2">add donuts</a></li>
+                <li><a href="#tabs-3">vegan donuts</a></li>
+            </ul>
             <!--list of donuts-->
-            <section id="foodBox">
+            <section id="tabs-1"class="foodBox">
+                <p>testing some stuff out not sure whats</p>
                 <ul id="food"></ul>
             </section>
 
             <!--add items-->
-            <section id="addView" class="hidden">
+            <section id="tabs-2">
                 <h2>Add donut</h2>
                 <!--menu for adding donuts-->
                 <input id="donutName" type="text" placeholder="donut name">
@@ -50,6 +61,10 @@
                 <input id="donutPrice" type="text" placeholder="price">
                 <input id="submit" type="button" value="Submit">
             </section>
+            <section id="tabs-3">
+                <p>vegan friendly donuts here!</p>
+            </section>
+            </div>
         </main>
     </body>
 </html>
